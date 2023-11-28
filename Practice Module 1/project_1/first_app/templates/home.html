@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1 class="text-center bg-primary">Testing django filters</h1>
+
+    <h2 class="text-danger">Join filter:</h2>
+    <h3 class="text-success">{{ join | join:" - " }}</h3>
+
+    <h2 class="text-danger">Date Filter:</h2>
+    <h3 class="text-success">{{ date | date:"D d M Y" }}</h3>
+
+
+    <h2 class="text-danger">Default Filter:</h2>
+    <h3 class="text-success">{{ empty|default:"nothing here" }}</h3>
+
+    
+    <h2 class="text-danger">Add filter:</h2>
+    <h3 class="text-success">{{ add | add:"5" }}</h3>
+
+    <h2 class="text-danger">Capfirst filter:</h2>
+    <h3 class="text-success">{{ name | capfirst }}</h3>
+
+    <h2 class="text-danger">Cut Filter:</h2>
+    <h3 class="text-success">{{ cut | cut:" " }}</h3>
+
+    <h2 class="text-danger">Dicsort filter:</h2>
+    <h3 class="text-success">{{ dic | dictsort:"name" }}</h3>
+
+    <h2 class="text-danger">First filter:</h2>
+    <h3 class="text-success">{{ dic | first }}</h3>
+
+    <h2 class="text-danger">Last Filter:</h2>
+    <h3 class="text-success">{{ dic | last }}</h3>
+    
+    <h2 class="text-danger">Length Filter:</h2>
+    <h3 class="text-success">{{ dic | length }}</h3>
+
+    <h2 class="text-danger">LineNumber Filter</h2>
+    <h3 class="text-success">{{ cut | linenumbers }}</h3>
+
+    <h2 class="text-danger">Lower Filter</h2>
+    <h3 class="text-success">{{ cut | lower }}</h3>
+
+    <h2 class="text-danger">Upper Filter</h2>
+    <h3 class="text-success">{{ cut | upper }}</h3>
+
+    <h2 class="text-danger">Title Filter</h2>
+    <h3 class="text-success">{{ cut | title }}</h3>
+
+    <h2 class="text-danger">Random Filter</h2>
+    <h3 class="text-success">{{ join | random }}</h3>
+
+    <h2 class="text-danger">Slice Filter</h2>
+    <h3 class="text-success">{{ join | slice:":3" }}</h3>
+
+    <h2 class="text-danger">Time Filter</h2>
+    <h3 class="text-success">{{ date | time:"H\h i\m" }}</h3>
+
+    <h2 class="text-danger">TimeScine Filter</h2>
+    <h3 class="text-success">{{ mybirthdate|timesince:date }}</h3>
+    
+
+    <h2 class="text-danger">TruncateChar Filter</h2>
+    <h3 class="text-success">{{ cut | truncatechars:5 }}.</h3>
+
+    <h2 class="text-danger">WordCount Filter</h2>
+    <h3 class="text-success">{{ cut | wordcount }}.</h3>
+
+    <h2 class="text-danger">TruncateWord Filter</h2>
+    <h3 class="text-success">{{ cut | truncatewords:2 }}</h3>
+
+    <h2 class="text-danger">Striptags Filter</h2>
+    <h3 class="text-success">{{ text | striptags }}</h3>
+
+    <h2 class="text-danger">Fularize Filter</h2>
+    <h3 class="text-success">{% for x in array %}
+        <h3 class="text-success">You have {{ x }} life{{ x|pluralize }} left.</h3>
+      {% endfor %}</h3>
+
+
+      <h2 class="text-danger">Make List Filter</h2>
+      <h3 class="text-success">{{ cut | make_list }}</h3>
+
+    {% comment %} Script file {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
