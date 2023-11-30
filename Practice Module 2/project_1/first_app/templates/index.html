@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content%}
+    {{block.super}}
+
+  {% for i in meals%}
+
+  <div class="card col-md-4 col-sm-12 m-auto mt-4" style="width: 18rem;">
+    <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Name : {{i.strMeal}}</h5>
+      <p class="card-text">ID : {{i.idMeal}}</p>
+    </div>
+  </div>
+
+  {% endfor %}
+
+{% endblock %}
