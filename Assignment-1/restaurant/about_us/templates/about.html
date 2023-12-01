@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block design %}
+        <link rel="stylesheet" href="{% static "css/about.css" %}">
+{% endblock %}
+
+
+{% block content %}
+
+     <div class="container row col-md-12 m-auto">
+        <div class="about_text col-md-6 col-sm-12 mt-5 p-lg-3">
+            <h1 >About Us</h1>
+            <h3>Rafiqul Islam Rahat</h3>
+            <p>Owner of RA Restro</p>
+            <p>"Welcome to RA Rastro, where culinary artistry meets heartwarming hospitality. Our tables are adorned with more than just exquisite dishes; they're set with stories of passion, flavors that dance, and a symphony of aromas that invite you into a world where every meal is a celebration. Step into a haven where ingredients are chosen with care, and each dish is crafted with love. At RA Restro, we believe in turning every dining experience into a journey of indulgence, where every bite tells a tale of dedication and flavors that linger like cherished memories. Join us in savoring the extraordinary, where every plate is a canvas, and every moment is a masterpiece. Here, you're not just a guest; you're part of a culinary celebration that transcends ordinary dining into an extraordinary experience."</p>
+
+            <button class="btn btn-warning">Read More</button>
+         </div>
+         <div class="about_img col-md-6 col-sm-12 mt-5 p-lg-3">
+            <img class="img-fluid w-100" src="{% static 'images/restaurant.jpg' %}" alt="">
+         </div>
+     </div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block design %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container row col-md-12 d-flex justify-content-center align-items-center m-auto">
+
+        <div class="text col-md-6 p-lg-3">
+            <h1>"Bite into Bliss: Crafted Perfection on a Bun!"</h1>
+            <p>Satisfy your cravings with our mouthwatering burgers! Each masterpiece is a celebration of flavors, from juicy patties to fresh, premium ingredients. Experience burger perfection at its finest.</p>
+        </div>
+        <div class="img-box col-md-6"><img class="img-fluid w-100 m-5 " src="{% static 'images/burger.jpg' %}" alt=""></div>
+    </div>
+
+{%endblock%}
