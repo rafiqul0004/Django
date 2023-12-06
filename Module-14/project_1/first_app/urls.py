@@ -1,8 +1,8 @@
-from django.urls import path
 
+from django.urls import path,include
 from .import views
 urlpatterns = [
-    path("",views.home),
-    path("courses/",views.courses),
-    path("about/",views.about),
+    
+    path('',views.home,name="homepage"),
+    path('delete/<int:roll>',views.delete_student,name="delete_student"),
 ]

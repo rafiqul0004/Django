@@ -1,11 +1,11 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
+from .import models
 
 # Create your views here.
-
 def home(request):
-    return HttpResponse("This is first app page")
-def about(request):
-    return HttpResponse("This is first app about apage")
-def courses(request):
-    return HttpResponse("This is first app courses page")
+    student=models.Student.objects.all()
+    return render(request,'home.html', {'data': student})
+
+def delete_student(request,roll):
+    std=models.Student.objects.get(pk=roll).delete()
+    return redirect("homepage")
