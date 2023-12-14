@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome</h1>
+    <h2>Hello {{ user }}</h2>
+
+    <a href="{% url 'update' %}" class="btn btn-info">Update Account</a>
+    <a href="{% url 'pass_change' %}" class="btn btn-warning">Change Password</a>
+{% endblock %}
