@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card" style="width: 18rem; margin:auto;">
+    <div class="card-header">
+        <h3> Name : {{data.owner.first_name}} {{data.owner.last_name}}</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Email : {{data.owner.email}}</li>
+      <li class="list-group-item">Phone Number : {{data.owner.phone_no}}</li>
+      <li class="list-group-item">Instrument Type : {{data.owner.instrument_type}}</li>
+    </ul>
+  </div>
+
+{% endblock %}
