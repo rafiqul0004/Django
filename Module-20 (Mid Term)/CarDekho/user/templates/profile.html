@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{%load crispy_forms_tags%}
+
+{%block content%}
+<h1>Hello {{user.username}}</h1>
+<div class="col-10 p-3">
+    <h1 class="text-success">You have purchased: {{cars | length}} cars</h1>
+    <div class="d-flex flex-wrap pt-5 ">
+      {% for car in cars %}
+      <div class="col-sm-3">
+        <div class="card m-2 shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body ">
+            <img src="{{car.car.image.url}}" class="card-img-top" alt="car_image">
+            <h5 class="card-title"><a class="text-decoration-none text-dark" href="{% url 'detail_cars' car.car.id%}">{{car.car.title}}</a></h5>
+            <p class="card-text">{{car.car.description | truncatewords:10}}</p>
+            <p>Quantity: {{car.car.quantity}}</p>
+            <p>Price: {{car.car.price}}</p>
+            <p class="btn btn-dark text-light">
+              Brand: {{car.car.brand}}
+            </p>
+            <p class="btn btn-success"> Buy on : {{car.order_date}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+ 
+
+{%endblock%}

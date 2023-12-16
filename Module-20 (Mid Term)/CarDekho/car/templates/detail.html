@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-12">
+    <div class="card m-2 shadow p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <img src="{{car.image.url}}" class="card-img-top"alt="car_image" style="width:50%;"/>
+        <h1 class="card-title">
+          {{car.title}}
+        </h1>
+        <p class="card-text">{{car.description }}</p>
+        <p>Quantity : {{car.quantity}}</p>
+        <p>Price : {{car.price}} Taka</p>
+        <p class="btn btn-dark text-light">
+            Brand: {{car.brand}}
+         </p>
+         <br>
+         {%if user.is_authenticated%}
+         <a href="{%url 'order' car.id %}" class="btn btn-warning">Buy Now</a>
+       {%endif%}
+      </div>
+    </div>
+  </div>
+  <div class="card m-2">
+    <h2 class="m-2">Total comments : {{comments | length}}</h2>
+    {%for comment in comments%}
+    <div class="card-body border m-2">
+      <p><b>{{comment.name}}</b> {{comment.created_at}}</p>
+      <p>{{comment.body}}</p>
+
+    </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="card m-2">
+    <div class="card-body">
+      <form method="post">
+        <h1>Add Coment</h1>
+      
+        {% csrf_token %}
+      
+        {{comment_form|crispy}}
+      
+        <button type="submit" class="btn btn-warning">Submit</button>
+      
+      </form>
+    </div>
+  </div>
+{% endblock%}
