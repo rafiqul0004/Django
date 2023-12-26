@@ -137,7 +137,7 @@ class PayLoanView(LoginRequiredMixin,View):
                 return redirect('transaction_report')
 
 class LoanListView(LoginRequiredMixin,ListView):
-    template_name = 'transaction/transaction_list.html'
+    template_name = 'transaction/loan_request.html'
     model = Transaction
     context_object_name = 'loans' # loan list ta ei loans context er moddhe thakbe
     
