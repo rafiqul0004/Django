@@ -1,0 +1,7 @@
+Services: https://testing-8az5.onrender.com/services/
+
+Doctor: https://testing-8az5.onrender.com/doctor/list/
+
+Designation : https://testing-8az5.onrender.com/doctor/designation/
+
+Specialization : https://testing-8az5.onrender.com/doctor/specialization/
