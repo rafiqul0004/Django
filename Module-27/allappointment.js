@@ -1,6 +1,6 @@
 const handleappointment = () => {
     const patient_id = localStorage.getItem('patient_id');
-    fetch(`https://testing-8az5.onrender.com/appointment/?patient_id=${patient_id}`)
+    fetch(`https://smart-care-rp5y.onrender.com/appointment/?patient_id=${patient_id}`)
         .then((res) => res.json())
         .then((data) => {
             data.forEach((item) => {

@@ -21,7 +21,7 @@ const handleRegistration = (event) => {
         document.getElementById('error').innerHTML = "";
         if (/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
             // console.log(info);
-            fetch("https://testing-8az5.onrender.com/patient/register/", {
+            fetch("https://smart-care-rp5y.onrender.com/patient/register", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(info)
@@ -46,7 +46,7 @@ const handleLogin = (event) => {
     const password = getValue("login-password");
     console.log(username, password);
     if ((username, password)) {
-      fetch("https://testing-8az5.onrender.com/patient/login/", {
+      fetch("https://smart-care-rp5y.onrender.com/patient/login/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ username, password }),

@@ -1,6 +1,6 @@
 const loadUserdetail = () => {
     const user_id = localStorage.getItem('user_id');
-    fetch(`https://testing-8az5.onrender.com/users/${user_id}`)
+    fetch(`https://smart-care-rp5y.onrender.com/patient/list/${user_id}`)
         .then(res => res.json())
         .then((data) => {
             const parent = document.getElementById('user-details');

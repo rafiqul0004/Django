@@ -1,5 +1,5 @@
 const loadServices = () => {
-    fetch("https://testing-8az5.onrender.com/services/")
+    fetch("https://smart-care-rp5y.onrender.com/services/")
         .then(res => res.json())
         .then((data) => displayServices(data))
         .catch((err) => displayServices(err));
@@ -30,7 +30,7 @@ const loadDoctors = (search) => {
     document.getElementById('spinner').style.display ="block"
     const parent = document.getElementById('doctors').innerHTML=""
     console.log(search);
-    fetch(`https://testing-8az5.onrender.com/doctor/list/?search=${search ? search : ""}`)
+    fetch(`https://smart-care-rp5y.onrender.com/doctor/list/?search=${search ? search : ""}`)
 
     .then(res => res.json())
         .then((data) => {
@@ -56,7 +56,7 @@ const displayDoctors = (doctors) => {
         div.classList.add('doc-card')
         div.innerHTML = `
                         <img class="doc-img" src=${doctor?.image} alt="">
-                        <h1>${doctor?.full_name}</h1>
+                        <h1>${doctor?.user}</h1>
                         <h4>${doctor?.designation[0]}</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, amet?</p>
                         <p>
@@ -72,7 +72,7 @@ const displayDoctors = (doctors) => {
 
 }
 const loadDegignation = () => {
-    fetch("https://testing-8az5.onrender.com/doctor/designation/")
+    fetch("https://smart-care-rp5y.onrender.com/doctor/designation/")
     .then(res => res.json())
         .then((data) => {
             data?.forEach((item) => {
@@ -86,7 +86,7 @@ const loadDegignation = () => {
 }
 
 const loadSpecialization = () => {
-    fetch("https://testing-8az5.onrender.com/doctor/specialization/")
+    fetch("https://smart-care-rp5y.onrender.com/doctor/specialization/")
     .then(res => res.json())
         .then((data) => {
             data?.forEach((item) => {
@@ -106,7 +106,7 @@ const handleSearch = () => {
 }
 
 const loadReview = () => { 
-    fetch("https://testing-8az5.onrender.com/doctor/review/")
+    fetch("https://smart-care-rp5y.onrender.com/doctor/review/")
         .then((res) => res.json())
         .then((data) => displayReview(data));
 }
